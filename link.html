@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>熱門車款</title>
+<script language="JavaScript">
+
+function initArray() {
+for (var i = 0; i < initArray.arguments.length; i++) {
+this[i] = initArray.arguments[i];
+}
+this.length = initArray.arguments.length;
+}
+var colors = new initArray(
+"#FF0000",
+"#FF9900",
+"#ffd700",
+"#00FF00",
+"#B9B973",
+"#FF00FF");
+delay = 1; // seconds
+link = 0;
+vlink = 2;
+function linkDance() {
+link = (link+1)%colors.length;
+vlink = (vlink+1)%colors.length;
+document.linkColor = colors[link];
+document.vlinkColor = colors[vlink];
+setTimeout("linkDance()",delay*1000);
+}
+linkDance();
+
+
+</script>
+
+<style type="text/css">
+p { font-size: 30pt;
+
+    background-color:steelblue;
+    text-align: center;
+}
+a { font-size: 30pt;
+    text-align: center;
+}
+html {
+            height: 100%;
+        }
+body {
+            background-image: images\bake.jpg;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+
+</style>
+</head>
+<body  background="images\bake.jpg">
+
+<center><a href="https://www.toyota.com.tw/offer.aspx" target="_blank">TOYOTA購車優惠</a><center><img src="images\toyota.png" alt=""><br>
+<center><a href="https://www.honda-taiwan.com.tw/auto/products_trial_finance.html"target="_blank">HONDA購車優惠</a><center><img src="images\honda.png" alt=""><br>
+<center><a href="https://www.ford.com.tw/sales-promotion/"target="_blank">FORD購車優惠</a><center><img src="images\ford.png" alt=""><br>
+<p><a href="index.html">返回主頁面</a><p>
+</body>
+</html>
